@@ -107,19 +107,26 @@ function createTextElement(tagName, className, text) {
   if (text) element.textContent = text;
   return element;
 }
+const presentationBrands = {
+  kvartal: "КВАРТАЛ · КОФЕЙНЯ",
+  tishe: "ТИШЕ · ПРОДУКТОВАЯ КОНЦЕПЦИЯ",
+  sdvig: "СДВИГ · ФЕСТИВАЛЬ"
+};
+
 function renderDeckSlide(slide) {
+  const gallery = sourceCard.dataset.gallery;
+  viewerSlide.replaceChildren();
   viewerSlide.className = `viewer-slide deck-slide deck-${slide.theme} deck-layout-${slide.layout}`;
+  viewerSlide.setAttribute("role", "group");
+  viewerSlide.setAttribute("aria-label", `${slide.title}. Слайд ${imageIndex + 1} из ${images.length}`);
+
+  const media = createTextElement("figure", "deck-media", "");
   const image = createTextElement("img", "deck-photo", "");
   image.src = `assets/images/${slide.image}.jpg`;
   image.alt = slide.alt;
   image.loading = "eager";
-  if (slide.layout === "cover" || slide.layout === "close") {
-    viewerSlide.append(image);
-  } else {
-    const media = createTextElement("figure", "deck-media", "");
-    media.append(image);
-    viewerSlide.append(media);
-  }
+  media.append(image);
+  viewerSlide.append(media);
 
   const content = createTextElement("div", "deck-copy", "");
   content.append(createTextElement("p", "deck-eyebrow", slide.eyebrow));
@@ -127,16 +134,26 @@ function renderDeckSlide(slide) {
   content.append(createTextElement("p", "deck-intro", slide.intro));
   if (slide.items?.length) {
     const points = createTextElement("div", "deck-points", "");
-    slide.items.forEach(item => {
+    slide.items.forEach((item, index) => {
       const point = createTextElement("article", "deck-point", "");
-      point.append(createTextElement("h4", "deck-point-label", item.label));
-      point.append(createTextElement("p", "", item.text));
+      point.append(createTextElement("span", "deck-point-number", String(index + 1).padStart(2, "0")));
+      const text = createTextElement("div", "deck-point-copy", "");
+      text.append(createTextElement("h4", "deck-point-label", item.label));
+      text.append(createTextElement("p", "", item.text));
+      point.append(text);
       points.append(point);
     });
     content.append(points);
   }
-  content.append(createTextElement("p", "deck-stamp", slide.stamp || "Самостоятельный концепт · 2026"));
+  if (slide.stamp) content.append(createTextElement("p", "deck-note", slide.stamp));
   viewerSlide.append(content);
+
+  const footer = createTextElement("footer", "deck-footer", "");
+  footer.setAttribute("aria-label", "Информация о слайде");
+  footer.append(createTextElement("span", "deck-footer-brand", presentationBrands[gallery]));
+  footer.append(createTextElement("span", "deck-footer-note", "Самостоятельный концепт · 2026"));
+  footer.append(createTextElement("span", "deck-footer-page", `${String(imageIndex + 1).padStart(2, "0")} / ${String(images.length).padStart(2, "0")}`));
+  viewerSlide.append(footer);
 }
 
 let images = [];
@@ -151,6 +168,9 @@ function showImage() {
   const image = images[imageIndex];
   viewerImage.hidden = isDeck;
   viewerSlide.hidden = !isDeck;
+  viewerHint.hidden = isDeck;
+  counter.hidden = isDeck;
+  viewer.classList.toggle("presentation-open", isDeck);
   viewerImage.classList.toggle("portrait", gallery === "mouse");
   viewerImage.classList.toggle("slide", false);
   if (isDeck) {
@@ -234,6 +254,9 @@ viewer.addEventListener("close", () => {
   viewerImage.hidden = false;
   viewerSlide.hidden = true;
   viewerSlide.replaceChildren();
+  viewerHint.hidden = false;
+  counter.hidden = false;
+  viewer.classList.remove("presentation-open");
 });
 viewerImage.addEventListener("load", () => {
   imageAnimation?.cancel();
