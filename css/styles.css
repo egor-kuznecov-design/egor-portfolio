@@ -691,3 +691,25 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   .about-profile > .eyebrow { margin-bottom: 14px; }
   .about-content > p { margin-top: 18px; }
 }
+
+
+/* Демонстрационные примеры ретуши фотографий */
+.retouch { padding-top: clamp(64px, 7vw, 100px); }
+.retouch-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.retouch-case { min-width: 0; }
+.retouch-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.retouch-frame { position: relative; min-width: 0; aspect-ratio: 4 / 3; margin: 0; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.retouch-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.retouch-frame figcaption { position: absolute; left: 8px; bottom: 8px; padding: 3px 7px; background: rgb(23 24 28 / 82%); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.retouch-portrait .retouch-frame { aspect-ratio: 3 / 4; }
+.retouch-portrait .retouch-frame img { object-position: center 38%; }
+.retouch-copy { padding-top: 14px; }
+.retouch-copy h3 { margin: 0 0 6px; font-size: 18px; letter-spacing: -.03em; }
+.retouch-copy p { color: var(--muted); font-size: 13px; line-height: 1.55; }
+@media (max-width: 1000px) {
+  .retouch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; }
+}
+@media (max-width: 640px) {
+  .retouch-grid { grid-template-columns: minmax(0, 1fr); }
+  .retouch-pair { gap: 8px; }
+}
