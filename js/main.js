@@ -107,6 +107,13 @@ const presentationBrands = {
   sdvig: "СДВИГ · ПАРТНЁРСКОЕ ПРЕДЛОЖЕНИЕ"
 };
 
+function createTextElement(tagName, className, text) {
+  const element = document.createElement(tagName);
+  if (className) element.className = className;
+  if (text) element.textContent = text;
+  return element;
+}
+
 function renderDeckSlide(slide) {
   const gallery = sourceCard.dataset.gallery;
   viewerSlide.replaceChildren();
