@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img" aria-labelledby="title">
+<title id="title">NOVA</title>
+<defs>
+<linearGradient id="nova" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5968E8"/><stop offset="1" stop-color="#2837A5"/></linearGradient>
+</defs>
+<g transform="translate(250 83)" fill="url(#nova)">
+<path d="M0-54 15-15 54 0 15 15 0 54-15 15-54 0-15-15z"/>
+<circle cx="0" cy="0" r="10" fill="#E9EBF8"/>
+<path d="M42-46 49-29 66-22 49-15 42 2 35-15 18-22 35-29z" fill="#F1B64A"/>
+</g>
+<text x="250" y="211" fill="#25294F" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="800" letter-spacing="10" text-anchor="middle">NOVA</text>
+</svg>

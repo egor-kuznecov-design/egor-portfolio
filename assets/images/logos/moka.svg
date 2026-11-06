@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img" aria-labelledby="title">
+<title id="title">MOKA</title>
+<g transform="translate(250 82)">
+<path d="M0-52c29 0 49 21 49 51S28 54 0 54-49 29-49-1-29-52 0-52z" fill="#85533B"/>
+<path d="M-2-43c-21 21-22 56 2 86" fill="none" stroke="#EFE7D9" stroke-width="5" stroke-linecap="round"/>
+<path d="M-70-35c-11 9-17 21-17 34M70-35c11 9 17 21 17 34" fill="none" stroke="#C38C5D" stroke-width="4" stroke-linecap="round"/>
+</g>
+<text x="250" y="215" fill="#49332A" font-family="Arial, Helvetica, sans-serif" font-size="57" font-weight="800" letter-spacing="9" text-anchor="middle">MOKA</text>
+</svg>
