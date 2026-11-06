@@ -348,3 +348,22 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   .process-step > span { margin-bottom: 10px; }
   #services .service { grid-template-columns: 26px 1fr; }
 }
+
+/* Деловые матрицы для коммерческих слайдов без вымышленных чисел. */
+.deck-layout-matrix .deck-media { display: none; }
+.deck-layout-matrix .deck-copy { grid-column: 1 / -1; }
+.deck-layout-matrix .deck-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+.deck-layout-matrix .deck-point { display: block; min-height: 112px; padding: 15px; border-left: 0; border-top: 2px solid var(--deck-accent); }
+.deck-layout-matrix .deck-point-number { display: block; margin-bottom: 12px; }
+.deck-layout-matrix .deck-point-label { font-size: 11px; }
+.deck-layout-matrix .deck-point p { font-size: 12px; line-height: 1.45; }
+.deck-layout-journey .deck-point, .deck-layout-roadmap .deck-point { min-height: 124px; }
+.deck-layout-cover .deck-footer-note, .deck-layout-close .deck-footer-note { color: var(--deck-muted); }
+@media (max-width: 1000px) {
+  .deck-layout-matrix .deck-media { display: none; }
+  .deck-layout-matrix .deck-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .deck-layout-matrix .deck-points { grid-template-columns: minmax(0, 1fr); }
+  .deck-layout-matrix .deck-point { min-height: 0; }
+}
