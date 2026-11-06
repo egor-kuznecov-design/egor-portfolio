@@ -663,7 +663,9 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
 /* Галерея логотипов */
 .identity { padding-top: clamp(64px, 7vw, 100px); }
 .identity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.logo-card { min-width: 0; margin: 0; }
 .identity-logo { display: grid; place-items: center; min-width: 0; aspect-ratio: 1.6 / 1; margin: 0; padding: 28px; overflow: hidden; }
+.identity-caption { margin-top: 12px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .identity-logo img { display: block; width: min(90%, 430px); height: 100%; object-fit: contain; }
 .identity-nord { background: #e8eeeb; }
 .identity-mira { background: #f1e7e5; }
