@@ -713,3 +713,7 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   .retouch-grid { grid-template-columns: minmax(0, 1fr); }
   .retouch-pair { gap: 8px; }
 }
+
+
+/* Панорамные пары для пейзажей сохраняют широкий кадр. */
+.retouch-landscape .retouch-frame { aspect-ratio: 16 / 9; }
