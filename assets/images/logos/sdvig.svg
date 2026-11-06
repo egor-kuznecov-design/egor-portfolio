@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+<title id="title">Сдвиг — логотип фестиваля графического дизайна</title>
+<desc id="desc">Три смещённых цветных модуля над тяжёлым геометрическим вордмарком.</desc>
+<g transform="translate(171 20)">
+<path fill="#2346D8" d="M0 29h54v54H0z"/>
+<path fill="#F56649" d="M28 0h54v54H28z"/>
+<path fill="#111722" d="M56 29h54v54H56z"/>
+</g>
+<text x="240" y="202" fill="#111722" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="900" letter-spacing="3" text-anchor="middle">СДВИГ</text>
+<path d="M125 222h230" stroke="#2346D8" stroke-width="6"/>
+<text x="240" y="257" fill="#111722" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4" text-anchor="middle">ФЕСТИВАЛЬ ГРАФИЧЕСКОГО ДИЗАЙНА</text>
+</svg>

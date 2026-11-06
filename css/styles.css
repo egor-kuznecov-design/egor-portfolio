@@ -658,3 +658,28 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   .deck-tishe.deck-layout-materials .deck-copy,
   .deck-sdvig.deck-layout-campaign-system .deck-copy { grid-column: 1; }
 }
+
+
+/* Логотипы в портфолио */
+.identity { padding-top: clamp(64px, 7vw, 100px); }
+.identity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 28px; }
+.identity-project { min-width: 0; }
+.identity-art { display: grid; place-items: center; width: 100%; aspect-ratio: 1.6 / 1; padding: 24px; box-sizing: border-box; overflow: hidden; }
+.identity-art img { display: block; width: min(88%, 400px); height: 100%; object-fit: contain; }
+.identity-forma .identity-art { background: #eeeae1; }
+.identity-quartal .identity-art { background: #f3ecdf; }
+.identity-tishe .identity-art { background: #e7eee8; }
+.identity-sdvig .identity-art { background: #eef044; }
+.identity-caption { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 16px 0 0; }
+.identity-caption h3 { margin: 0 0 6px; font-size: 21px; letter-spacing: -.04em; }
+.identity-caption p { max-width: 470px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.identity-caption .category { flex: 0 0 auto; margin-top: 3px; }
+.identity-status { margin: 12px 0 0; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.identity-forma .identity-caption h3 { letter-spacing: .12em; }
+.identity-sdvig .identity-art { border-bottom: 5px solid #2346d8; }
+@media (max-width: 720px) {
+  .identity-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .identity-art { aspect-ratio: 1.55 / 1; }
+  .identity-caption { flex-direction: column; gap: 8px; }
+  .identity-caption .category { margin-top: 0; }
+}

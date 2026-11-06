@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+<title id="title">FORMA — логотип интерьерной студии</title>
+<desc id="desc">Монограмма F внутри архитектурной арки.</desc>
+<g fill="none" stroke="#34413B" stroke-linecap="square" stroke-linejoin="miter">
+<path d="M150 145V92a90 90 0 0 1 180 0v53" stroke-width="7"/>
+<path d="M197 143V73h91M197 107h66" stroke-width="10"/>
+</g>
+<path d="M170 155h140" stroke="#B4A68F" stroke-width="2"/>
+<text x="240" y="220" fill="#34413B" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="500" letter-spacing="14" text-anchor="middle">FORMA</text>
+<text x="240" y="250" fill="#777C73" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="5.4" text-anchor="middle">INTERIOR STUDIO</text>
+</svg>

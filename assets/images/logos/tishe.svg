@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+<title id="title">Тише — логотип бренда акустического света</title>
+<desc id="desc">Подвесной светильник в кольце и мягких звуковых дугах.</desc>
+<g fill="none" stroke="#486B58" stroke-linecap="round" stroke-linejoin="round">
+<path d="M178 53c-18 12-28 29-28 47s10 35 28 47M302 53c18 12 28 29 28 47s-10 35-28 47" stroke-width="3"/>
+<circle cx="240" cy="100" r="53" stroke-width="2"/>
+<path d="M223 71h34l14 45c-8 9-19 14-31 14s-23-5-31-14z" fill="#D7E3D9" stroke-width="3"/>
+<path d="M240 64v-9" stroke-width="3"/>
+</g>
+<circle cx="240" cy="51" r="4" fill="#B9935F"/>
+<text x="240" y="224" fill="#26362D" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="600" letter-spacing="13" text-anchor="middle">ТИШЕ</text>
+<text x="240" y="256" fill="#617467" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="4.2" text-anchor="middle">АКУСТИЧЕСКИЙ СВЕТ</text>
+</svg>
