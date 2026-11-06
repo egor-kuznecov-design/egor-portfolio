@@ -653,3 +653,8 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   .deck-tishe.deck-layout-sku-catalog .deck-footer,
   .deck-sdvig.deck-layout-value-poster .deck-footer { grid-row: 2; }
 }
+
+@media (max-width: 1000px), (max-height: 700px) {
+  .deck-tishe.deck-layout-materials .deck-copy,
+  .deck-sdvig.deck-layout-campaign-system .deck-copy { grid-column: 1; }
+}
