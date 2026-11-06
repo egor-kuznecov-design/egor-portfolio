@@ -449,3 +449,207 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   .deck-layout-poster .deck-title { font-size: clamp(36px, 10vw, 52px); }
   .deck-layout-poster .deck-copy { padding-bottom: 10px; }
 }
+
+
+/* Slide-by-slide art direction: Kвартал — café editorial. */
+.deck-kvartal .deck-copy { position: relative; }
+.deck-kvartal .deck-copy::before { width: 36px; height: 3px; margin-bottom: 18px; background: var(--deck-accent); content: ""; }
+.deck-kvartal.deck-layout-cover .deck-copy::before,
+.deck-kvartal.deck-layout-close .deck-copy::before { width: 58px; height: 4px; }
+.deck-kvartal.deck-layout-menu-board .deck-media,
+.deck-kvartal.deck-layout-service-route .deck-media,
+.deck-kvartal.deck-layout-opening-timeline .deck-media,
+.deck-kvartal.deck-layout-unit-economics .deck-media { display: none; }
+.deck-kvartal.deck-layout-menu-board .deck-copy,
+.deck-kvartal.deck-layout-service-route .deck-copy,
+.deck-kvartal.deck-layout-opening-timeline .deck-copy,
+.deck-kvartal.deck-layout-unit-economics .deck-copy { grid-column: 1 / -1; }
+.deck-kvartal.deck-layout-menu-board .deck-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 25px; border-top: 1px solid #b9a69a; }
+.deck-kvartal.deck-layout-menu-board .deck-point { display: flex; min-height: 145px; flex-direction: column; justify-content: space-between; padding: 16px 13px; border: 0; border-right: 1px solid #d4c7bb; }
+.deck-kvartal.deck-layout-menu-board .deck-point:last-child { border-right: 0; }
+.deck-kvartal.deck-layout-menu-board .deck-point-number { font-family: Georgia, serif; font-size: 25px; font-weight: 400; }
+.deck-kvartal.deck-layout-menu-board .deck-point:nth-child(4) { background: #813b42; color: #fff9f0; }
+.deck-kvartal.deck-layout-menu-board .deck-point:nth-child(4) .deck-point-label,
+.deck-kvartal.deck-layout-menu-board .deck-point:nth-child(4) .deck-point-number,
+.deck-kvartal.deck-layout-menu-board .deck-point:nth-child(4) p { color: #fff9f0; }
+.deck-kvartal.deck-layout-service-route .deck-points,
+.deck-kvartal.deck-layout-opening-timeline .deck-points { position: relative; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 28px; }
+.deck-kvartal.deck-layout-service-route .deck-point,
+.deck-kvartal.deck-layout-opening-timeline .deck-point { display: block; min-height: 140px; padding: 17px 14px 10px 0; border: 0; border-top: 2px solid #813b42; background: transparent; }
+.deck-kvartal.deck-layout-service-route .deck-point-number,
+.deck-kvartal.deck-layout-opening-timeline .deck-point-number { display: block; width: auto; height: auto; margin: 0 0 18px; border-radius: 0; background: transparent; color: #813b42; font: 26px Georgia, serif; }
+.deck-kvartal.deck-layout-opening-timeline .deck-point:nth-child(2) { margin-top: 18px; }
+.deck-kvartal.deck-layout-opening-timeline .deck-point:nth-child(3) { margin-top: 36px; }
+.deck-kvartal.deck-layout-unit-economics .deck-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 24px; border-top: 1px solid #b9a69a; border-left: 1px solid #b9a69a; }
+.deck-kvartal.deck-layout-unit-economics .deck-point { display: block; min-height: 124px; border: 0; border-right: 1px solid #b9a69a; border-bottom: 1px solid #b9a69a; background: transparent; }
+.deck-kvartal.deck-layout-unit-economics .deck-point-number { display: block; margin-bottom: 18px; font: 24px Georgia, serif; }
+
+ /* Тише — предметная студия и технический лист. */
+.deck-tishe.viewer-slide { background-image: linear-gradient(rgb(50 88 70 / 3%) 1px, transparent 1px), linear-gradient(90deg, rgb(50 88 70 / 3%) 1px, transparent 1px); background-size: 28px 28px; }
+.deck-tishe.deck-layout-use-cases .deck-points { display: flex; flex-direction: column; gap: 0; margin-top: 18px; }
+.deck-tishe.deck-layout-use-cases .deck-point { align-items: center; min-height: 0; padding: 11px 0; border: 0; border-bottom: 1px solid #c6d4cb; border-radius: 0; background: transparent; }
+.deck-tishe.deck-layout-use-cases .deck-point-number { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #315a48; color: #fff; }
+.deck-tishe.deck-layout-use-cases .deck-point-label { font-size: 10px; }
+.deck-tishe.deck-layout-value-manifesto .deck-copy { padding: 22px; border: 1px solid #b9c9bf; background: rgb(248 250 248 / 88%); }
+.deck-tishe.deck-layout-value-manifesto .deck-title { max-width: 760px; font-size: clamp(42px, 6vw, 70px); }
+.deck-tishe.deck-layout-sku-catalog .deck-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 26px; }
+.deck-tishe.deck-layout-sku-catalog .deck-point { display: flex; min-height: 155px; flex-direction: column; justify-content: space-between; padding: 14px; border: 1px solid #b6c8bd; border-radius: 2px; background: #e5ede7; }
+.deck-tishe.deck-layout-sku-catalog .deck-point:nth-child(even) { transform: translateY(12px); background: #f9faf8; }
+.deck-tishe.deck-layout-sku-catalog .deck-point-number { font-size: 12px; }
+.deck-tishe.deck-layout-materials .deck-media { border-radius: 2px; background: #dce5df; }
+.deck-tishe.deck-layout-materials .deck-points { grid-template-columns: 1fr; gap: 4px; }
+.deck-tishe.deck-layout-materials .deck-point { padding: 9px 12px; border-left-width: 2px; border-radius: 0; }
+.deck-tishe.deck-layout-validation-spec .deck-media { display: none; }
+.deck-tishe.deck-layout-validation-spec .deck-copy { grid-column: 1 / -1; }
+.deck-tishe.deck-layout-validation-spec .deck-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; margin-top: 22px; }
+.deck-tishe.deck-layout-validation-spec .deck-point { min-height: 104px; padding: 12px 0; border: 0; border-top: 1px solid #9db2a4; border-radius: 0; background: transparent; }
+.deck-tishe.deck-layout-validation-spec .deck-point-number { display: block; margin-bottom: 11px; }
+.deck-tishe.deck-layout-sales-kit .deck-media,
+.deck-tishe.deck-layout-pilot-roadmap .deck-media { display: none; }
+.deck-tishe.deck-layout-sales-kit .deck-copy,
+.deck-tishe.deck-layout-pilot-roadmap .deck-copy { grid-column: 1 / -1; }
+.deck-tishe.deck-layout-sales-kit .deck-points,
+.deck-tishe.deck-layout-pilot-roadmap .deck-points { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 25px; }
+.deck-tishe.deck-layout-sales-kit .deck-point,
+.deck-tishe.deck-layout-pilot-roadmap .deck-point { display: block; min-height: 132px; padding: 16px; border: 1px solid #c6d4cb; border-radius: 3px; background: #f9faf8; }
+.deck-tishe.deck-layout-sales-kit .deck-point-number,
+.deck-tishe.deck-layout-pilot-roadmap .deck-point-number { display: block; width: 30px; height: 30px; margin: 0 0 12px; border: 1px solid #315a48; border-radius: 50%; background: transparent; color: #315a48; }
+.deck-tishe.deck-layout-pilot-roadmap .deck-point:nth-child(2) { margin-top: 16px; }
+.deck-tishe.deck-layout-pilot-roadmap .deck-point:nth-child(3) { margin-top: 32px; }
+.deck-tishe.deck-layout-decision-close .deck-title { max-width: 760px; font-size: clamp(42px, 6vw, 74px); }
+
+/* Сдвиг — фестивальная айдентика с плакатным контрастом. */
+.deck-sdvig .deck-title { font-weight: 850; letter-spacing: -.065em; }
+.deck-sdvig.deck-layout-audience-map .deck-points { display: flex; flex-direction: column; gap: 0; }
+.deck-sdvig.deck-layout-audience-map .deck-point { padding: 9px 0; border: 0; border-bottom: 1px solid #50596b; border-radius: 0; background: transparent; }
+.deck-sdvig.deck-layout-audience-map .deck-point-number { color: #eef044; }
+.deck-sdvig.deck-layout-value-poster .deck-copy { justify-content: end; max-width: 100%; }
+.deck-sdvig.deck-layout-value-poster .deck-title { max-width: 980px; font-size: clamp(48px, 7.8vw, 90px); line-height: .94; text-transform: uppercase; }
+.deck-sdvig.deck-layout-value-poster .deck-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; }
+.deck-sdvig.deck-layout-campaign-system .deck-media { border: 8px solid #eef044; }
+.deck-sdvig.deck-layout-campaign-system .deck-copy { padding-left: 8px; }
+.deck-sdvig.deck-layout-participant-flow .deck-media,
+.deck-sdvig.deck-layout-partner-packages .deck-media,
+.deck-sdvig.deck-layout-kpi-board .deck-media,
+.deck-sdvig.deck-layout-festival-program .deck-media { display: none; }
+.deck-sdvig.deck-layout-participant-flow .deck-copy,
+.deck-sdvig.deck-layout-partner-packages .deck-copy,
+.deck-sdvig.deck-layout-kpi-board .deck-copy,
+.deck-sdvig.deck-layout-festival-program .deck-copy { grid-column: 1 / -1; }
+.deck-sdvig.deck-layout-festival-program .deck-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; margin-top: 24px; }
+.deck-sdvig.deck-layout-festival-program .deck-point { display: block; min-height: 145px; padding: 14px; border: 0; border-radius: 0; background: #3158f5; }
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(2) { transform: translateY(16px); background: #eef044; }
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(3) { background: #fb6549; }
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(4) { transform: translateY(16px); background: #eeeae1; }
+.deck-sdvig.deck-layout-festival-program .deck-point-number,
+.deck-sdvig.deck-layout-festival-program .deck-point-label,
+.deck-sdvig.deck-layout-festival-program .deck-point p { color: #151923; }
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(1) .deck-point-number,
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(1) .deck-point-label,
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(1) p,
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(3) .deck-point-number,
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(3) .deck-point-label,
+.deck-sdvig.deck-layout-festival-program .deck-point:nth-child(3) p { color: #fff; }
+.deck-sdvig.deck-layout-festival-program .deck-point-number { display: block; margin-bottom: 16px; font-size: 15px; }
+.deck-sdvig.deck-layout-participant-flow .deck-points,
+.deck-sdvig.deck-layout-partner-packages .deck-points { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 24px; }
+.deck-sdvig.deck-layout-participant-flow .deck-point,
+.deck-sdvig.deck-layout-partner-packages .deck-point { display: block; min-height: 138px; padding: 14px; border: 1px solid #50596b; border-top: 4px solid #eef044; border-radius: 0; background: #1b2330; }
+.deck-sdvig.deck-layout-participant-flow .deck-point:nth-child(2),
+.deck-sdvig.deck-layout-partner-packages .deck-point:nth-child(2) { transform: translateY(14px); border-top-color: #3158f5; }
+.deck-sdvig.deck-layout-participant-flow .deck-point:nth-child(3),
+.deck-sdvig.deck-layout-partner-packages .deck-point:nth-child(3) { transform: translateY(28px); border-top-color: #fb6549; }
+.deck-sdvig.deck-layout-participant-flow .deck-point-number,
+.deck-sdvig.deck-layout-partner-packages .deck-point-number { display: block; margin-bottom: 15px; }
+.deck-sdvig.deck-layout-kpi-board .deck-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 24px; border-top: 1px solid #50596b; border-left: 1px solid #50596b; }
+.deck-sdvig.deck-layout-kpi-board .deck-point { display: block; min-height: 125px; padding: 13px; border: 0; border-right: 1px solid #50596b; border-bottom: 1px solid #50596b; border-radius: 0; background: transparent; }
+.deck-sdvig.deck-layout-kpi-board .deck-point-number { display: block; margin-bottom: 14px; color: #eef044; font-size: 22px; }
+
+@media (max-width: 1000px), (max-height: 700px) {
+  .deck-kvartal.deck-layout-menu-board .deck-points,
+  .deck-kvartal.deck-layout-unit-economics .deck-points,
+  .deck-tishe.deck-layout-sku-catalog .deck-points,
+  .deck-tishe.deck-layout-validation-spec .deck-points,
+  .deck-tishe.deck-layout-sales-kit .deck-points,
+  .deck-tishe.deck-layout-pilot-roadmap .deck-points,
+  .deck-sdvig.deck-layout-festival-program .deck-points,
+  .deck-sdvig.deck-layout-kpi-board .deck-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .deck-kvartal.deck-layout-service-route .deck-points,
+  .deck-kvartal.deck-layout-opening-timeline .deck-points,
+  .deck-sdvig.deck-layout-participant-flow .deck-points,
+  .deck-sdvig.deck-layout-partner-packages .deck-points { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .deck-kvartal.deck-layout-menu-board .deck-copy,
+  .deck-kvartal.deck-layout-service-route .deck-copy,
+  .deck-kvartal.deck-layout-opening-timeline .deck-copy,
+  .deck-kvartal.deck-layout-unit-economics .deck-copy,
+  .deck-tishe.deck-layout-validation-spec .deck-copy,
+  .deck-tishe.deck-layout-sales-kit .deck-copy,
+  .deck-tishe.deck-layout-pilot-roadmap .deck-copy,
+  .deck-sdvig.deck-layout-festival-program .deck-copy,
+  .deck-sdvig.deck-layout-participant-flow .deck-copy,
+  .deck-sdvig.deck-layout-partner-packages .deck-copy,
+  .deck-sdvig.deck-layout-kpi-board .deck-copy { grid-row: 1; }
+  .deck-kvartal.deck-layout-menu-board .deck-footer,
+  .deck-kvartal.deck-layout-service-route .deck-footer,
+  .deck-kvartal.deck-layout-opening-timeline .deck-footer,
+  .deck-kvartal.deck-layout-unit-economics .deck-footer,
+  .deck-tishe.deck-layout-validation-spec .deck-footer,
+  .deck-tishe.deck-layout-sales-kit .deck-footer,
+  .deck-tishe.deck-layout-pilot-roadmap .deck-footer,
+  .deck-sdvig.deck-layout-festival-program .deck-footer,
+  .deck-sdvig.deck-layout-participant-flow .deck-footer,
+  .deck-sdvig.deck-layout-partner-packages .deck-footer,
+  .deck-sdvig.deck-layout-kpi-board .deck-footer { grid-row: 2; }
+  .deck-tishe.deck-layout-sku-catalog .deck-point:nth-child(even),
+  .deck-sdvig.deck-layout-festival-program .deck-point:nth-child(2),
+  .deck-sdvig.deck-layout-festival-program .deck-point:nth-child(4) { transform: none; }
+}
+@media (max-width: 560px) {
+  .deck-kvartal.deck-layout-menu-board .deck-points,
+  .deck-kvartal.deck-layout-service-route .deck-points,
+  .deck-kvartal.deck-layout-opening-timeline .deck-points,
+  .deck-kvartal.deck-layout-unit-economics .deck-points,
+  .deck-tishe.deck-layout-sku-catalog .deck-points,
+  .deck-tishe.deck-layout-validation-spec .deck-points,
+  .deck-tishe.deck-layout-sales-kit .deck-points,
+  .deck-tishe.deck-layout-pilot-roadmap .deck-points,
+  .deck-sdvig.deck-layout-festival-program .deck-points,
+  .deck-sdvig.deck-layout-participant-flow .deck-points,
+  .deck-sdvig.deck-layout-partner-packages .deck-points,
+  .deck-sdvig.deck-layout-kpi-board .deck-points { grid-template-columns: minmax(0, 1fr); }
+  .deck-kvartal.deck-layout-opening-timeline .deck-point:nth-child(2),
+  .deck-kvartal.deck-layout-opening-timeline .deck-point:nth-child(3),
+  .deck-tishe.deck-layout-pilot-roadmap .deck-point:nth-child(2),
+  .deck-tishe.deck-layout-pilot-roadmap .deck-point:nth-child(3),
+  .deck-sdvig.deck-layout-participant-flow .deck-point:nth-child(2),
+  .deck-sdvig.deck-layout-participant-flow .deck-point:nth-child(3),
+  .deck-sdvig.deck-layout-partner-packages .deck-point:nth-child(2),
+  .deck-sdvig.deck-layout-partner-packages .deck-point:nth-child(3) { margin-top: 0; transform: none; }
+}
+
+
+/* В новых композициях сетка заполняется содержанием без пустого места под фото. */
+.deck-tishe.deck-layout-value-manifesto .deck-media,
+.deck-tishe.deck-layout-sku-catalog .deck-media,
+.deck-sdvig.deck-layout-value-poster .deck-media { display: none; }
+.deck-tishe.deck-layout-sku-catalog .deck-copy { grid-column: 1 / -1; }
+.deck-tishe.deck-layout-materials .deck-media,
+.deck-sdvig.deck-layout-campaign-system .deck-media { grid-column: 1; }
+.deck-tishe.deck-layout-materials .deck-copy,
+.deck-sdvig.deck-layout-campaign-system .deck-copy { grid-column: 2; }
+
+.kvartal-art .slide-cover-copy strong { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+.tishe-art { background: #e6eee8; }
+.tishe-art::before { position: absolute; z-index: 1; inset: 13px; border: 1px solid rgb(235 245 238 / 66%); content: ""; pointer-events: none; }
+.sdvig-art { border-bottom: 5px solid #eef044; }
+.sdvig-art .slide-cover-copy > span { color: #eef044; }
+.sdvig-art .slide-cover-copy strong { font-weight: 900; letter-spacing: -.06em; text-transform: uppercase; }
+
+@media (max-width: 1000px), (max-height: 700px) {
+  .deck-tishe.deck-layout-value-manifesto .deck-copy,
+  .deck-tishe.deck-layout-sku-catalog .deck-copy,
+  .deck-sdvig.deck-layout-value-poster .deck-copy { grid-row: 1; }
+  .deck-tishe.deck-layout-value-manifesto .deck-footer,
+  .deck-tishe.deck-layout-sku-catalog .deck-footer,
+  .deck-sdvig.deck-layout-value-poster .deck-footer { grid-row: 2; }
+}
