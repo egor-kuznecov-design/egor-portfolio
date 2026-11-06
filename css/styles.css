@@ -367,3 +367,85 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   .deck-layout-matrix .deck-points { grid-template-columns: minmax(0, 1fr); }
   .deck-layout-matrix .deck-point { min-height: 0; }
 }
+
+
+/* Своя визуальная система для каждого портфолио-проекта. */
+.deck-kvartal.viewer-slide { background: #f3ecdf; }
+.deck-kvartal .deck-title { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -.035em; }
+.deck-kvartal .deck-media { border: 0; box-shadow: 0 14px 34px rgb(65 39 28 / 12%); }
+.deck-kvartal .deck-point { padding: 12px 8px 10px 0; border: 0; border-top: 1px solid rgb(129 59 66 / 28%); background: transparent; }
+.deck-kvartal .deck-layout-journey .deck-point-number,
+.deck-kvartal .deck-layout-roadmap .deck-point-number { width: auto; height: auto; margin: 0 0 12px; border-radius: 0; background: transparent; color: var(--deck-accent); }
+
+.deck-tishe.viewer-slide { background: #edf2ef; }
+.deck-tishe.deck-layout-product-cover { grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); }
+.deck-tishe .deck-title { letter-spacing: -.035em; }
+.deck-tishe .deck-eyebrow,
+.deck-tishe .deck-point-number { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
+.deck-tishe .deck-media { border: 1px solid #d9e2dc; border-radius: 14px; background: #e2eae5; }
+.deck-tishe .deck-photo { box-sizing: border-box; padding: 18px; object-fit: contain; }
+.deck-tishe .deck-point { border: 1px solid #d8e3dc; border-left: 3px solid var(--deck-accent); border-radius: 8px; background: #f8faf8; }
+.deck-tishe .deck-note { padding: 10px 12px; border: 0; border-radius: 6px; background: #e0e9e3; }
+
+.deck-sdvig.viewer-slide { background: #121722; color: #f7f7f2; }
+.deck-sdvig { --deck-ink: #f7f7f2; --deck-muted: #c0c6d1; --deck-accent: #eef044; }
+.deck-sdvig .deck-media { border: 0; border-radius: 0; background: #171d29; }
+.deck-sdvig .deck-footer { border-color: rgb(255 255 255 / 25%); color: #c0c6d1; }
+.deck-sdvig .deck-point { border-color: #343d4c; border-left-color: var(--deck-accent); background: #1c2330; }
+.deck-sdvig .deck-point-label { color: #fff; }
+.deck-sdvig .deck-note { color: #e1e4ec; }
+
+.deck-layout-poster .deck-media { position: absolute; z-index: 0; inset: 0; grid-column: 1 / -1; grid-row: 1 / -1; height: auto; min-height: 0; border: 0; }
+.deck-layout-poster .deck-media::after { position: absolute; z-index: 1; inset: 0; content: ""; background: linear-gradient(90deg, rgb(10 15 24 / 82%), rgb(10 15 24 / 44%) 58%, rgb(10 15 24 / 10%)); }
+.deck-layout-poster .deck-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .86; }
+.deck-layout-poster .deck-copy { position: relative; z-index: 1; grid-column: 1 / -1; grid-row: 1; align-self: end; max-width: 82%; padding-bottom: 18px; }
+.deck-layout-poster .deck-eyebrow { color: #eef044; }
+.deck-layout-poster .deck-title { max-width: 900px; color: #fff; font-size: clamp(42px, 7vw, 82px); letter-spacing: -.06em; line-height: .98; text-transform: uppercase; }
+.deck-layout-poster .deck-intro { max-width: 560px; color: #f0f1f4; }
+.deck-layout-poster .deck-footer { position: relative; z-index: 1; border-color: rgb(255 255 255 / 30%); color: #d5d9e1; }
+
+.deck-layout-catalog .deck-media,
+.deck-layout-manifesto .deck-media,
+.deck-layout-schedule .deck-media { display: none; }
+.deck-layout-catalog .deck-copy,
+.deck-layout-manifesto .deck-copy,
+.deck-layout-schedule .deck-copy { grid-column: 1 / -1; }
+.deck-layout-catalog .deck-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+.deck-layout-catalog .deck-point { display: block; min-height: 122px; padding: 15px; border: 1px solid #d8e3dc; border-top: 3px solid var(--deck-accent); border-radius: 9px; background: #f9fbf9; }
+.deck-layout-catalog .deck-point-number { display: block; margin-bottom: 18px; }
+.deck-layout-spec .deck-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 22px; }
+.deck-layout-spec .deck-point { display: block; padding: 12px 0; border: 0; border-top: 1px solid #cbd8d0; border-radius: 0; background: transparent; }
+.deck-layout-spec .deck-point-number { display: block; margin-bottom: 9px; }
+.deck-layout-manifesto .deck-copy { justify-content: end; max-width: 100%; }
+.deck-layout-manifesto .deck-title { max-width: 900px; font-size: clamp(42px, 6vw, 72px); }
+.deck-layout-manifesto .deck-intro { max-width: 700px; }
+.deck-layout-schedule .deck-points { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 25px; }
+.deck-layout-schedule .deck-point { display: block; min-height: 128px; padding: 14px; border: 0; border-radius: 0; background: #eef044; }
+.deck-layout-schedule .deck-point-number,
+.deck-layout-schedule .deck-point-label,
+.deck-layout-schedule .deck-point p { color: #171b24; }
+.deck-layout-schedule .deck-point-number { display: block; margin-bottom: 12px; font-size: 13px; }
+.deck-layout-schedule .deck-point-label { margin-bottom: 8px; font-size: 11px; }
+
+@media (max-width: 1000px), (max-height: 700px) {
+  .deck-tishe.deck-layout-product-cover { grid-template-columns: minmax(0, 1fr); }
+  .deck-layout-catalog .deck-points,
+  .deck-layout-schedule .deck-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .deck-layout-catalog .deck-copy,
+  .deck-layout-manifesto .deck-copy,
+  .deck-layout-schedule .deck-copy { grid-row: 1; }
+  .deck-layout-catalog .deck-footer,
+  .deck-layout-manifesto .deck-footer,
+  .deck-layout-schedule .deck-footer { grid-row: 2; }
+  .deck-layout-poster .deck-copy { max-width: 100%; }
+}
+@media (max-width: 560px) {
+  .deck-layout-catalog .deck-points,
+  .deck-layout-spec .deck-points,
+  .deck-layout-schedule .deck-points { grid-template-columns: minmax(0, 1fr); }
+  .deck-layout-catalog .deck-point,
+  .deck-layout-schedule .deck-point { min-height: 0; }
+  .deck-layout-manifesto .deck-title { font-size: clamp(36px, 10vw, 52px); }
+  .deck-layout-poster .deck-title { font-size: clamp(36px, 10vw, 52px); }
+  .deck-layout-poster .deck-copy { padding-bottom: 10px; }
+}
