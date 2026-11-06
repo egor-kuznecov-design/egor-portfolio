@@ -1,12 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img" aria-labelledby="title">
 <title id="title">NOVA</title>
-<defs>
-<linearGradient id="nova" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5968E8"/><stop offset="1" stop-color="#2837A5"/></linearGradient>
-</defs>
-<g transform="translate(250 83)" fill="url(#nova)">
-<path d="M0-54 15-15 54 0 15 15 0 54-15 15-54 0-15-15z"/>
-<circle cx="0" cy="0" r="10" fill="#E9EBF8"/>
-<path d="M42-46 49-29 66-22 49-15 42 2 35-15 18-22 35-29z" fill="#F1B64A"/>
+<g fill="none" stroke="#3448C5" stroke-width="12" stroke-linecap="square" stroke-linejoin="round">
+<path d="M184 121V45h20l92 78V45h20"/>
 </g>
-<text x="250" y="211" fill="#25294F" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="800" letter-spacing="10" text-anchor="middle">NOVA</text>
+<g fill="#25AFAE">
+<circle cx="184" cy="45" r="10"/>
+<circle cx="316" cy="45" r="10"/>
+</g>
+<circle cx="184" cy="121" r="9" fill="#3448C5"/>
+<circle cx="296" cy="123" r="9" fill="#3448C5"/>
+<path d="M216 92h20" stroke="#F0B24A" stroke-width="5" stroke-linecap="round"/>
+<text x="250" y="219" fill="#202B48" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" letter-spacing="11" text-anchor="middle">NOVA</text>
 </svg>

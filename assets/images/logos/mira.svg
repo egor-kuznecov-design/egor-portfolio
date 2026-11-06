@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img" aria-labelledby="title">
 <title id="title">MIRA</title>
-<g fill="none" stroke="#6F494B" stroke-width="4">
-<circle cx="250" cy="87" r="43"/>
-<path d="M250 46c20 17 21 41 0 82-21-41-20-65 0-82z" fill="#D6A6A1" stroke="#6F494B"/>
-<path d="M209 87c17-20 41-21 82 0-41 21-65 20-82 0z" fill="#F5E8E5" stroke="#6F494B"/>
-<circle cx="250" cy="87" r="7" fill="#6F494B" stroke="none"/>
-</g>
-<text x="250" y="207" fill="#553A3C" font-family="Georgia, 'Times New Roman', serif" font-size="54" letter-spacing="12" text-anchor="middle">MIRA</text>
+<path d="M250 27c-34 36-55 65-55 91a55 55 0 0 0 110 0c0-26-21-55-55-91z" fill="#E3C8C1" stroke="#795452" stroke-width="3"/>
+<path d="M250 49c-18 26-30 47-30 66a30 30 0 0 0 60 0c0-19-12-40-30-66z" fill="#F5E7E2"/>
+<path d="M228 116V88l22 22 22-22v28" fill="none" stroke="#795452" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="250" cy="130" r="3.5" fill="#B99063"/>
+<text x="250" y="220" fill="#533C3D" font-family="Georgia, 'Times New Roman', serif" font-size="55" letter-spacing="14" text-anchor="middle">MIRA</text>
 </svg>
