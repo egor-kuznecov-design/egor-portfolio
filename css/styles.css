@@ -763,3 +763,7 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   letter-spacing: .14em;
   pointer-events: none;
 }
+
+.case-page-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 18px; padding-bottom: 4px; border-bottom: 1px solid currentColor; color: var(--text, #17181c); font-size: 13px; font-weight: 600; text-decoration: none; transition: gap .2s ease; }
+.case-page-link:hover { gap: 17px; }
+.case-page-link:focus-visible { outline: 3px solid #b07344; outline-offset: 5px; }
