@@ -745,3 +745,21 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
   .hero h1 { font-size: clamp(37px, 8.1vw, 51px); }
   #work { padding-top: 30px; }
 }
+
+/* Current demo status covers the outdated label baked into the preview image. */
+.morning-art::before {
+  content: "ДЕМО-ВЕРСИЯ";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: clamp(12px, 2.5vw, 36px);
+  padding-inline: 6%;
+  background: #28251f;
+  color: #e7ad86;
+  font-size: clamp(7px, .65vw, 9px);
+  font-weight: 700;
+  letter-spacing: .14em;
+  pointer-events: none;
+}
