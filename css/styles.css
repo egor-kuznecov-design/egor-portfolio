@@ -44,7 +44,7 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-kicker .eyebrow { display: flex; align-items: center; gap: 10px; }
 .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
 .small-label { color: var(--muted); letter-spacing: .04em; }
-h1 { font-size: clamp(42px, 7.9vw, 116px); font-weight: 500; line-height: 1.04; letter-spacing: -.065em; }
+h1 { font-size: clamp(42px, 7.3vw, 108px); font-weight: 500; line-height: 1.04; letter-spacing: -.065em; }
 h1 > span { display: block; }
 .hero-period { color: var(--text); }
 .hero-bottom { margin-top: 42px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; }
@@ -717,3 +717,19 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
 
 /* Панорамные пары для пейзажей сохраняют широкий кадр. */
 .retouch-landscape .retouch-frame { aspect-ratio: 16 / 9; }
+
+/* Скриншоты сайтов показывают интерфейс целиком, начиная с шапки. */
+.morning-art img { object-position: center top; }
+.forma-preview-art img { object-position: center top; }
+
+/* Дополнительные пары ретуши доступны по желанию без длинной прокрутки. */
+.retouch-more { margin-top: 34px; }
+.retouch-more > summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--accent); font-size: 14px; cursor: pointer; list-style: none; }
+.retouch-more > summary::-webkit-details-marker { display: none; }
+.retouch-more > summary .retouch-hide { display: none; }
+.retouch-more[open] > summary .retouch-show { display: none; }
+.retouch-more[open] > summary .retouch-hide { display: inline; }
+.retouch-more > summary .retouch-arrow { margin-left: auto; font-size: 20px; transition: transform .2s ease; }
+.retouch-more[open] > summary .retouch-arrow { transform: rotate(180deg); }
+.retouch-more > .retouch-grid { padding-top: 26px; }
+.retouch-more > summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
