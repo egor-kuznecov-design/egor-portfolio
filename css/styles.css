@@ -677,17 +677,15 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
 }
 
 
-/* Фото и расширенное описание в блоке «Обо мне». */
+/* Расширенное описание в блоке «Обо мне». */
 .about { display: grid; grid-template-columns: minmax(230px, .78fr) minmax(0, 1.22fr); align-items: start; gap: clamp(28px, 6vw, 84px); padding-bottom: var(--section-space); }
 .about-profile { min-width: 0; }
 .about-profile > .eyebrow { margin: 0 0 20px; }
-.about-photo { display: block; width: min(100%, 380px); aspect-ratio: 4 / 5; border: 1px solid var(--line); border-radius: 2px; background: var(--surface); object-fit: cover; object-position: center 42%; }
 .about-content { min-width: 0; }
 .about-content > p { max-width: 650px; margin-top: 20px; color: var(--muted); font-size: clamp(16px, 1.35vw, 19px); line-height: 1.72; }
 .about-content .principles { margin-top: 28px; }
 @media (max-width: 720px) {
   .about { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .about-photo { width: min(100%, 360px); }
   .about-profile > .eyebrow { margin-bottom: 14px; }
   .about-content > p { margin-top: 18px; }
 }
@@ -767,3 +765,32 @@ h2 { font-size: clamp(32px, 4.1vw, 58px); line-height: 1.12; font-weight: 500; l
 .case-page-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 18px; padding-bottom: 4px; border-bottom: 1px solid currentColor; color: var(--text, #17181c); font-size: 13px; font-weight: 600; text-decoration: none; transition: gap .2s ease; }
 .case-page-link:hover { gap: 17px; }
 .case-page-link:focus-visible { outline: 3px solid #b07344; outline-offset: 5px; }
+
+/* Профиль для работодателя: текст, работы и прямой контакт. */
+.hero h1 .hero-role { font-size: clamp(29px, 4.2vw, 62px); letter-spacing: -.04em; margin-top: 14px; line-height: 1.15; }
+.hero-location { font-size: 15px; color: var(--text); }
+.hero-employment { font-size: 14px; color: var(--muted); margin: 5px 0 20px; }
+.hero-intro { max-width: 520px; }
+.portfolio-index { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 16px; }
+.portfolio-index a { display: flex; flex-direction: column; gap: 7px; padding: 24px 24px 24px 0; }
+.portfolio-index a + a { border-left: 1px solid var(--line); padding-left: 24px; }
+.portfolio-index strong { font-size: 34px; font-weight: 500; color: var(--accent); line-height: 1; letter-spacing: -.04em; }
+.portfolio-index span { font-size: 13px; color: var(--muted); }
+.portfolio-index a:hover span { color: var(--text); }
+.about { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+.about h2 { font-size: clamp(36px, 4.2vw, 60px); max-width: 470px; }
+.about-content > .about-lead { margin-top: 0; color: var(--text); font-size: clamp(23px, 2.5vw, 34px); line-height: 1.35; letter-spacing: -.025em; }
+.profile-facts { margin: 30px 0 0; }
+.profile-facts > div { padding: 14px 0; border-top: 1px solid var(--line); }
+.profile-facts dt { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.profile-facts dd { font-size: 15px; margin: 4px 0 0; }
+.contact-handle { overflow-wrap: anywhere; }
+@media (max-width: 720px) {
+  .about { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .portfolio-index a { padding: 20px 16px 20px 0; }
+  .portfolio-index a + a { padding-left: 16px; }
+  .portfolio-index a:nth-child(3) { border-left: 0; padding-left: 0; }
+  .portfolio-index a:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .hero h1 .hero-role { font-size: clamp(27px, 6vw, 42px); margin-top: 14px; }
+}
