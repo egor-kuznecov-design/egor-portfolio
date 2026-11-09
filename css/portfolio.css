@@ -176,6 +176,8 @@
 }
 
 /* Learning, downloadable profile and project reasoning. */
+.retouch-open-hint { display: block; margin-top: 12px; font-size: 13px; color: var(--accent); }
+.extra-work[open] .retouch-open-hint { display: none; }
 @media (min-width:801px) { .feature-case .case-visual { position: sticky; top: 108px; } }
 .resume-link { display: flex; align-items: center; gap: 16px; width: fit-content; font-size: 13px; margin-top: 18px; min-height: 36px; }
 .resume-link span { color: var(--muted); font-size: 11px; }
